@@ -2,9 +2,10 @@ import java.util.Scanner;
 public class Fibonacci {
     public static void main(String[]args) {
         Scanner show = new Scanner(System.in);
-        System.out.print("Masukan Jumlah Deret Fibonacci ");
+        System.out.print("Masukan Jumlah Deret Fibonacci : ");
         int n = show.nextInt();
-        long fib[] = new long[n];
+        long jum = 0;
+		long fib[] = new long[n];
          
         fib[0] = 0;
         fib[1] = 1;
@@ -16,6 +17,14 @@ public class Fibonacci {
         for (int i = 0; i < n; i++) {
             System.out.print(fib[i] +  " ");
         }
+		
+		System.out.println("");
+		int result = 0;
+		for(int i = 1; i < n; i++) {
+            result += fib[i];
+        }
+		System.out.println(result);
+	
     }
  
 }
